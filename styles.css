@@ -1,0 +1,97 @@
+:root {
+	--blue: #00b2f7;
+}
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app {
+	padding: 20px;
+}
+
+.input-class {
+	padding: 7px 10px;
+	border-radius: 3px;
+	outline: none;
+	border: 1px solid black;
+	font-size: 16px;
+	margin-bottom: 10px;
+	width: 285px;
+	transition: border-color 0.2s;
+}
+.input-class:focus {
+	border-color: var(--blue);
+}
+
+#input-decipher {
+	width: 440px;
+}
+
+#select {
+	margin-left: 10px;
+	margin-bottom: 20px;
+	padding: 4px 10px;
+	font-size: 18px;
+	color: var(--blue);
+	border-radius: 3px;
+	outline: none;
+	transition: border-color 0.2s;
+}
+#select:focus {
+	border-color: var(--blue);
+}
+
+#button {
+	border: none;
+	border-radius: 3px;
+	outline: none;
+	background-color: var(--blue);
+	padding: 8px 20px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+#button:hover {
+	background-color: #0096cf;
+}
+
+.result-container {
+	display: flex;
+}
+.result-container > p:first-child {
+	margin-right: 10px;
+}
+
+#input-secret {
+	display: none;
+}
+#input-secret.active {
+	display: block;
+}
+
+#container-decipher {
+	display: none;
+	margin-top: 40px;
+}
+#container-decipher.active {
+	display: block;
+}
+
+#button-decipher {
+	border: none;
+	border-radius: 3px;
+	outline: none;
+	background-color: #2cc66c;
+	padding: 8px 20px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+#button-decipher:hover {
+	background-color: #2dbc67;
+}

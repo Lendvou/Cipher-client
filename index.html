@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cipher for MZI</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div id="app">
+			<h2>
+				Welcome to the very first playground for my favorite course Crypto MZI
+			</h2>
+			<span>Select cipher method:</span>
+			<select name="" id="select">
+				<option value="caesar">caesar</option>
+				<option value="block">block based</option>
+				<option value="md5">md5</option>
+				<option value="sha1">sha1</option>
+			</select>
+
+			<div id="container">
+				<input id="input" class="input-class" type="text" placeholder="Value" />
+				<input
+					id="input-secret"
+					class="input-class"
+					type="text"
+					placeholder="Secret"
+				/>
+				<div class="result-container">
+					<p>Result is:</p>
+					<p id="output"></p>
+				</div>
+				<button id="button">cipher</button>
+			</div>
+
+			<div id="container-decipher">
+				<p>Decipher value (copy and paste encrypted value):</p>
+				<input
+					class="input-class"
+					type="text"
+					id="input-decipher"
+					placeholder="Value"
+				/>
+				<div class="result-container">
+					<p>Deciphered result is:</p>
+					<p id="output-decipher"></p>
+				</div>
+
+				<button id="button-decipher">decipher</button>
+			</div>
+
+			<!-- <div id="md5-container">
+				<input id="md5-input" type="text" />
+				<p id="md5-output"></p>
+				<button id="md5-button">cipher</button>
+			</div> -->
+		</div>
+	</body>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"
+		integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
+		crossorigin="anonymous"
+	></script>
+	<script src="index.js"></script>
+</html>
