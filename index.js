@@ -1,5 +1,3 @@
-console.log('crypto', CryptoJS)
-
 const select = document.getElementById('select')
 const button = document.getElementById('button')
 const input = document.getElementById('input')
