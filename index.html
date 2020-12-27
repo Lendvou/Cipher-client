@@ -14,9 +14,10 @@
 			<span>Select cipher method:</span>
 			<select name="" id="select">
 				<option value="caesar">caesar</option>
-				<option value="block">block based</option>
+				<option value="aes">aes</option>
 				<option value="md5">md5</option>
 				<option value="sha1">sha1</option>
+				<option value="elGamal">elGamal</option>
 			</select>
 
 			<div id="container">
@@ -28,7 +29,7 @@
 					placeholder="Secret"
 				/>
 				<div class="result-container">
-					<p>Result is:</p>
+					<p style="display: block">Result is:</p>
 					<p id="output"></p>
 				</div>
 				<button id="button">cipher</button>
@@ -36,12 +37,12 @@
 
 			<div id="container-decipher">
 				<p>Decipher value (copy and paste encrypted value):</p>
-				<input
+				<textarea
 					class="input-class"
 					type="text"
 					id="input-decipher"
 					placeholder="Value"
-				/>
+				></textarea>
 				<div class="result-container">
 					<p>Deciphered result is:</p>
 					<p id="output-decipher"></p>

@@ -60,9 +60,11 @@ body {
 
 .result-container {
 	display: flex;
+	flex-direction: column;
 }
 .result-container > p:first-child {
 	margin-right: 10px;
+	margin-bottom: 0;
 }
 
 #input-secret {
