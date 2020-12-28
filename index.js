@@ -2,7 +2,6 @@ import vigenere from './algs/vigenere.js'
 import caesar from './algs/caesar.js'
 import transposition from './algs/transposition.js'
 import tripledes from './algs/tripledes.js'
-import rabbit from './algs/rabbit.js'
 
 const select = document.getElementById('select')
 const button = document.getElementById('button')
@@ -35,7 +34,6 @@ buttonDecipher.onclick = () => {
 		caesar: caesarDecrypt,
 		tripledes: tripledesDecrypt,
 		transposition: transpositionDecrypt,
-		rabbit: rabbitDecrypt,
 	}
 
 	const currentAlg = items[select.value]
@@ -51,7 +49,6 @@ function cipher() {
 		aes: aes,
 		tripledes: tripledesEncrypt,
 		sha256: sha256,
-		rabbit: rabbitEncrypt,
 		transposition: transpositionEncrypt,
 	}
 
@@ -156,17 +153,4 @@ function tripledesDecrypt() {
 	const key = inputSecret.value
 
 	outputDecipher.innerText = tripledes.decrypt(text, key)
-}
-
-function rabbitEncrypt() {
-	const text = input.value
-	const key = inputSecret.value
-
-	output.innerText = rabbit.encrypt(text, key)
-}
-function rabbitDecrypt() {
-	const text = inputDecipher.value
-	const key = inputSecret.value
-
-	outputDecipher.innerText = rabbit.decrypt(text, key)
 }
