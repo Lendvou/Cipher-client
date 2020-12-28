@@ -73,8 +73,10 @@ select.onchange = (e) => {
 
 	if (e.target.value === 'caesar') {
 		inputSecret.placeholder = 'Shift'
+		inputSecret.type = 'number'
 	} else {
 		inputSecret.placeholder = 'Secret'
+		inputSecret.type = 'text'
 	}
 }
 

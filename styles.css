@@ -23,7 +23,7 @@ body {
 	border: 1px solid black;
 	font-size: 16px;
 	margin-bottom: 10px;
-	width: 285px;
+	width: 310px;
 	transition: border-color 0.2s;
 }
 .input-class:focus {
