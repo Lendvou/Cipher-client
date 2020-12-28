@@ -14,19 +14,23 @@
 			<span>Select cipher method:</span>
 			<select name="" id="select">
 				<option value="caesar">caesar</option>
+				<option value="vigenere">vigenere</option>
 				<option value="aes">aes</option>
 				<option value="md5">md5</option>
 				<option value="sha1">sha1</option>
-				<option value="elGamal">elGamal</option>
+				<option value="tripledes">3des</option>
+				<option value="transposition">transposition</option>
+				<option value="sha256">sha256</option>
+				<option value="rabbit">rabbit</option>
 			</select>
 
 			<div id="container">
 				<input id="input" class="input-class" type="text" placeholder="Value" />
 				<input
 					id="input-secret"
-					class="input-class"
+					class="input-class active"
 					type="text"
-					placeholder="Secret"
+					placeholder="Shift"
 				/>
 				<div class="result-container">
 					<p style="display: block">Result is:</p>
@@ -35,7 +39,7 @@
 				<button id="button">cipher</button>
 			</div>
 
-			<div id="container-decipher">
+			<div id="container-decipher" class="active">
 				<p>Decipher value (copy and paste encrypted value):</p>
 				<textarea
 					class="input-class"
@@ -63,5 +67,5 @@
 		integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
 		crossorigin="anonymous"
 	></script>
-	<script src="index.js"></script>
+	<script src="index.js" type="module"></script>
 </html>
