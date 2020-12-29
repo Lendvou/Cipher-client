@@ -54,29 +54,25 @@ function createCipherKey(keyword, alphabet = alphabet1) {
 	return cipher
 }
 
-function createCipher(keyword, phrase, alphabet = alphabet1) {
-	phrase = phrase
-	var cipherKey = createCipherKey(keyword, alphabet)
+const Transposition = {
+	encrypt: (keyword, phrase, alphabet = alphabet1) => {
+		phrase = phrase
+		var cipherKey = createCipherKey(keyword, alphabet)
 
-	return Array.prototype.map
-		.call(phrase, function (i) {
-			return i === ' ' ? ' ' : cipherKey[alphabet.indexOf(i)]
-		})
-		.join('')
-}
+		return Array.prototype.map
+			.call(phrase, function (i) {
+				return i === ' ' ? ' ' : cipherKey[alphabet.indexOf(i)]
+			})
+			.join('')
+	},
+	decrypt: (key, phrase, alphabet = alphabet1) => {
+		phrase = phrase
+		var cipher = createCipherKey(key, alphabet)
 
-function solveCipher(key, phrase, alphabet = alphabet1) {
-	phrase = phrase
-	var cipher = createCipherKey(key, alphabet)
-
-	return Array.prototype.map
-		.call(phrase, function (i) {
-			return i === ' ' ? ' ' : alphabet[cipher.indexOf(i)]
-		})
-		.join('')
-}
-
-export default {
-	encrypt: createCipher,
-	decrypt: solveCipher,
+		return Array.prototype.map
+			.call(phrase, function (i) {
+				return i === ' ' ? ' ' : alphabet[cipher.indexOf(i)]
+			})
+			.join('')
+	},
 }

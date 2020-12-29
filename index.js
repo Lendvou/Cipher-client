@@ -1,8 +1,3 @@
-import vigenere from './algs/vigenere.js'
-import caesar from './algs/caesar.js'
-import transposition from './algs/transposition.js'
-import tripledes from './algs/tripledes.js'
-
 const select = document.getElementById('select')
 const button = document.getElementById('button')
 const input = document.getElementById('input')
@@ -84,13 +79,13 @@ function transpositionEncrypt() {
 	const text = input.value
 	const secret = inputSecret.value
 
-	output.innerText = transposition.encrypt(secret, text)
+	output.innerText = Transposition.encrypt(secret, text)
 }
 function transpositionDecrypt() {
 	const text = inputDecipher.value
 	const secret = inputSecret.value
 
-	outputDecipher.innerText = transposition.decrypt(secret, text)
+	outputDecipher.innerText = Transposition.decrypt(secret, text)
 }
 
 function md5() {
@@ -108,12 +103,12 @@ function sha256() {
 function caesarEncrypt() {
 	const text = input.value
 	const shift = +inputSecret.value
-	output.innerText = caesar.encrypt(text, isNaN(shift) ? 3 : shift)
+	output.innerText = Caesar.encrypt(text, isNaN(shift) ? 3 : shift)
 }
 function caesarDecrypt() {
 	const text = inputDecipher.value
 	const shift = +inputSecret.value
-	outputDecipher.innerText = caesar.decrypt(text, isNaN(shift) ? 3 : shift)
+	outputDecipher.innerText = Caesar.decrypt(text, isNaN(shift) ? 3 : shift)
 }
 
 function aes() {
@@ -135,24 +130,24 @@ function vigenereEncrypt() {
 	const text = input.value
 	const secret = inputSecret.value
 
-	output.innerText = vigenere.encrypt(text, secret)
+	output.innerText = Vigenere.encrypt(text, secret)
 }
 function vigenereDecrypt() {
 	const encryptedText = inputDecipher.value
 	const secret = inputSecret.value
 
-	outputDecipher.innerText = vigenere.decrypt(encryptedText, secret)
+	outputDecipher.innerText = Vigenere.decrypt(encryptedText, secret)
 }
 
 function tripledesEncrypt() {
 	const text = input.value
 	const key = inputSecret.value
 
-	output.innerText = tripledes.encrypt(text, key)
+	output.innerText = Tripledes.encrypt(text, key)
 }
 function tripledesDecrypt() {
 	const text = inputDecipher.value
 	const key = inputSecret.value
 
-	outputDecipher.innerText = tripledes.decrypt(text, key)
+	outputDecipher.innerText = Tripledes.decrypt(text, key)
 }

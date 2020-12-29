@@ -65,19 +65,15 @@ const worker = (str, key, type, lang) => {
 	return result
 }
 
-const vigenereEncrypt = (text = null, key = null) => {
-	const currentLang =
-		text.charCodeAt(0) > 95 && text.charCodeAt(0) < 123 ? 'lat' : 'cyr'
-	return worker(text, key, 'e', currentLang)
-}
-
-const vigenereDecrypt = (cipher = null, key = null) => {
-	const currentLang =
-		cipher.charCodeAt(0) > 95 && cipher.charCodeAt(0) < 123 ? 'lat' : 'cyr'
-	return worker(cipher, key, 'd', currentLang)
-}
-
-export default {
-	encrypt: vigenereEncrypt,
-	decrypt: vigenereDecrypt,
+const Vigenere = {
+	encrypt: (text = null, key = null) => {
+		const currentLang =
+			text.charCodeAt(0) > 95 && text.charCodeAt(0) < 123 ? 'lat' : 'cyr'
+		return worker(text, key, 'e', currentLang)
+	},
+	decrypt: (cipher = null, key = null) => {
+		const currentLang =
+			cipher.charCodeAt(0) > 95 && cipher.charCodeAt(0) < 123 ? 'lat' : 'cyr'
+		return worker(cipher, key, 'd', currentLang)
+	},
 }
