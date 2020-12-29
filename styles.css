@@ -48,6 +48,16 @@ body {
 	border-color: var(--blue);
 }
 
+h2 {
+	margin-bottom: 8px;
+}
+.info {
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-size: 13px;
+	opacity: 0.8;
+}
+
 #button {
 	border: none;
 	border-radius: 3px;
@@ -102,4 +112,12 @@ body {
 }
 #button-decipher:hover {
 	background-color: #2dbc67;
+}
+
+#flex-image {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 25px;
+	opacity: 0.5;
 }
