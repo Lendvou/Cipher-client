@@ -49,6 +49,7 @@ const worker = (str, key, type, lang) => {
 	if (str === null || key === null) {
 		throw Error('Message and key should be not empty')
 	}
+	// str = str.toLowerCase()
 	key = keepLetters(key)
 	let result = ''
 	let keyIndex = 0
@@ -65,15 +66,21 @@ const worker = (str, key, type, lang) => {
 	return result
 }
 
+const getLang = (text) => {
+	return (text.charCodeAt(0) > 95 && text.charCodeAt(0) < 123) ||
+		(text.charCodeAt(0) > 64 && text.charCodeAt(0) < 91)
+		? 'lat'
+		: 'cyr'
+}
+
 const Vigenere = {
 	encrypt: (text = null, key = null) => {
-		const currentLang =
-			text.charCodeAt(0) > 95 && text.charCodeAt(0) < 123 ? 'lat' : 'cyr'
+		const currentLang = getLang(text)
 		return worker(text, key, 'e', currentLang)
 	},
 	decrypt: (cipher = null, key = null) => {
-		const currentLang =
-			cipher.charCodeAt(0) > 95 && cipher.charCodeAt(0) < 123 ? 'lat' : 'cyr'
+		const currentLang = getLang(cipher)
+
 		return worker(cipher, key, 'd', currentLang)
 	},
 }
